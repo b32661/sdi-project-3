@@ -1,6 +1,13 @@
 // Jeremy Criddle
 // SDI 1301
 // Project 3
-// theme
+// circle of life
 
-//alert("JavaScript works!");
+
+//global variables
+
+
+//functions
+
+
+//main code
