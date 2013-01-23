@@ -2,19 +2,34 @@
 // SDI 1301
 // Project 3
 // "cats"
-
-
-var json = {
-    
-}
 var cat = function (name, age, size, family){
+    if (size === "medium"){
+            size = 1
+    } else{
+            size = 2
+        }
 
-        return {
+
+
+    if (family === "LFam"){
+        family = "Lara's family's cats";
+    }   else {
+        if (family === "NFam"){
+            family = "Nancy's family's cats";
+        } else {
+            if (family === "FFam"){
+                family = "Kelly's family's cats";
+            } else {
+                family = "Julie's family's cats";
+            }
+        }
+
+    }
+         return {
             "name"  : name,
             "age"   : age,
             "size"  : size,
-            "family": family,
-
+            "family": family
 
     };
 
@@ -34,10 +49,8 @@ var milly = cat("Milly", "1", "medium", "JFam");
 var cats = [jj, annastasia, baby, boots, fluffy, ginger, littleKitty, midnight, milly, tilly];
 for (var i=0; i<cats.length; i++){
     console.log("Hi! My name is " +
-        cats[i].name + " I am " +
-        cats[i].age + " , I am " +
-        cats[i].size + " size, and I live with the " + cats[i].family);
-
-
-
+        cats[i].name + " , I am " +
+        cats[i].age + " years old, my size is a  " +
+        cats[i].size + " , and I am one of " + cats[i].family);
 }
+console.log(cats);
