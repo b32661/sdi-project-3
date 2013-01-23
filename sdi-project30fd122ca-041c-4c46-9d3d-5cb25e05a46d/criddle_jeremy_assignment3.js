@@ -3,13 +3,18 @@
 // Project 3
 // "cats"
 
+
+var json = {
+    
+}
 var cat = function (name, age, size, family){
-var getName = function(){return name; };
-    return {
-      "name"  : getName,
-      "age"   : age,
-      "size"  : size,
-      "family": family
+
+        return {
+            "name"  : name,
+            "age"   : age,
+            "size"  : size,
+            "family": family,
+
 
     };
 
@@ -27,8 +32,12 @@ var fluffy = cat("Fluffy", "12", "medium", "FFam");
 var tilly = cat("Tilly", "1", "medium", "JFam");
 var milly = cat("Milly", "1", "medium", "JFam");
 var cats = [jj, annastasia, baby, boots, fluffy, ginger, littleKitty, midnight, milly, tilly];
-for var i=0; i<cats.length; i++){
-    console.log(cats[i]);
+for (var i=0; i<cats.length; i++){
+    console.log("Hi! My name is " +
+        cats[i].name + " I am " +
+        cats[i].age + " , I am " +
+        cats[i].size + " size, and I live with the " + cats[i].family);
+
 
 
 }
