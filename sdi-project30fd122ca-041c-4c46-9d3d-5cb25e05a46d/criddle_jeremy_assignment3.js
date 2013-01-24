@@ -18,10 +18,7 @@ var cats = {cat:[
 ]};
 
 
-for (var i=0; i<cats.length; i++){
-    console.log("Hi! My name is " +
-        cats[i].name + " , I am " +
-        cats[i].age + " years old, my size is a  " +
-        cats[i].size + " , and I am one of " + cats[i].family);
-}
-console.log(cats);
+for (var currentCat=0; currentCat<cats.cat.length; currentCat++)
+    console.log("Hi! My name is " + cats.cat[currentCat].name
+);
+
