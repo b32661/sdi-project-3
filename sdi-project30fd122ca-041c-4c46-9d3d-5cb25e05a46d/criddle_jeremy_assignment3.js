@@ -17,8 +17,19 @@ var cats = {cat:[
     {name:"Milly", age:1, size:"medium", family:"JF"}
 ]};
 
+//
+var clarifyFamily = {LF: function(){LF = "Lara's family"},
+    NF: function (){NF = "Nancy's family"},
+    FF: function (){FF = "Kelly's family"},
+    JF: function(){JF = "Julie's family"}};
 
-for (var currentCat=0; currentCat<cats.cat.length; currentCat++)
-    console.log("Hi! My name is " + cats.cat[currentCat].name
-);
+
+
+//main comfy cozy code
+for (var currentCat=0; currentCat<cats.cat.length; currentCat++){
+    console.log("Hi! My name is " + cats.cat[currentCat].name + " . I am " +
+        cats.cat[currentCat].age + " years old. I am a " +
+        cats.cat[currentCat].size + " sized kitty and I live with the " +
+        cats.cat[currentCat].family + " family. My family name might be a little unclear, we need to clarifyFamily()");
+}
 
