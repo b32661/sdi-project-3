@@ -2,51 +2,22 @@
 // SDI 1301
 // Project 3
 // "cats"
-var cat = function (name, age, size, family){
-    if (size === "medium"){
-            size = 1
-    } else{
-            size = 2
-        }
+
+//global meow-iables
+var cats = {cat:[
+    {name:"JJ", age:6, size:"medium", family:"LF"},
+    {name:"Ginger", age:6, size:"large", family:"LF"},
+    {name:"Annastasia", age:10, size:"medium", family:"LF"},
+    {name:"Baby", age:2, size:"medium", family:"LF"},
+    {name:"Midnight", age:5, size:"medium", family:"NF"},
+    {name:"Little Kitty", age:2, size:"small", family:"NF"},
+    {name:"Boots", age:11, size:"medium", family:"FF"},
+    {name:"Fluffy", age:12, size:"medium", family:"FF"},
+    {name:"Tilly", age:1, size:"medium", family:"JF"},
+    {name:"Milly", age:1, size:"medium", family:"JF"}
+]};
 
 
-
-    if (family === "LFam"){
-        family = "Lara's family's cats";
-    }   else {
-        if (family === "NFam"){
-            family = "Nancy's family's cats";
-        } else {
-            if (family === "FFam"){
-                family = "Kelly's family's cats";
-            } else {
-                family = "Julie's family's cats";
-            }
-        }
-
-    }
-         return {
-            "name"  : name,
-            "age"   : age,
-            "size"  : size,
-            "family": family
-
-    };
-
-};
-
-
-var jj = cat("JJ", "6", "medium", "LFam");
-var ginger = cat("Ginger", "6", "large", "LFam");
-var annastasia = cat("Annastasia", "10", "medium", "LFam");
-var baby = cat("Baby", "2", "medium", "LFam");
-var midnight = cat("Midnight", "5", "medium", "NFam");
-var littleKitty = cat("Little Kitty", "2", "small", "NFam");
-var boots = cat("Boots", "11", "medium", "FFam");
-var fluffy = cat("Fluffy", "12", "medium", "FFam");
-var tilly = cat("Tilly", "1", "medium", "JFam");
-var milly = cat("Milly", "1", "medium", "JFam");
-var cats = [jj, annastasia, baby, boots, fluffy, ginger, littleKitty, midnight, milly, tilly];
 for (var i=0; i<cats.length; i++){
     console.log("Hi! My name is " +
         cats[i].name + " , I am " +
