@@ -13,38 +13,41 @@ var json = {"expenses":[
 
 //global meow-iables
 var cats = {cat:[
-    {name:"JJ", age:6, isLarge:false, family:"Lara's family", favorite : {toy: "ball", food: "fish"}},
-    {name:"Ginger", age:6, isLarge:true, family:"Lara's family", favorite : {toy: "ball of yarn", food: "poultry"}},
-    {name:"Annastasia", age:10, isLarge:false, family:"Lara's family", favorite : {toy: "lazer", food: "beef"}},
-    {name:"Baby", age:4, isLarge:false, family:"Lara's family", favorite : {toy: "ball", food: "poultry"}},
-    {name:"Midnight", age:5, isLarge:false, family:"Nancy's family", favorite : {toy: "lazer", food: "beef"}},
-    {name:"Little Kitty", age:3, isLarge:false, family:"Nancy's family", favorite : {toy: "ball", food: "fish"}},
-    {name:"Boots", age:11, isLarge:false, family:"Kelly's family", favorite : {toy: "ball of yarn", food: "poultry"}},
-    {name:"Fluffy", age:12, isLarge:true, family:"Kelly's family", favorite : {toy: "lazer", food: "fish"}},
-    {name:"Tilly", age:2, isLarge:false, family:"Julie's family", favorite : {toy: "ball", food: "beef"}},
-    {name:"Milly", age:2, isLarge:false, family:"Julie's family", favorite : {toy: "fish", food: "fish"}}
+    {name:"JJ", age:6, isLarge:false,
+        toTalk:[function toPurr(){console.log("purr")},
+        function toMeow(){console.log("meow")}],
+        favorite : {toy: "ball", food: "fish"}},
+    {name:"Ginger", age:6, isLarge:true,
+        toTalk:[function toPurr(){console.log("purr")},
+        function toMeow(){console.log("meow");return}],
+        favorite : {toy: "ball of yarn", food: "poultry"}},
+    {name:"Annastasia", age:10, isLarge:false,
+        toTalk:[function toPurr(){console.log("purr")},
+        function toMeow(){console.log("meow")}],
+        favorite : {toy: "lazer", food: "beef"}},
+    {name:"Baby", age:4, isLarge:false,
+        toTalk:[function toPurr(){console.log("purr")},
+        function toMeow(){console.log("meow")}],
+        favorite : {toy: "ball", food: "poultry"}}
 ]};
-
-//
-
 
 
 // main code
 // console log parts of cat object
 for (var currentCat=0; currentCat<cats.cat.length; currentCat++){
-    console.log("Hi! My name is " + cats.cat[currentCat].name + " . I am " +
-        cats.cat[currentCat].age + " years old. It is " +
-        cats.cat[currentCat].isLarge + " that I am a large sized kitty and I live with " +
-        cats.cat[currentCat].family + " . I really like to play with a " +
-        cats.cat[currentCat].favorite.toy + ". " + cats.cat[currentCat].favorite.food + " is numee!")
+    var kitty = cats.cat[currentCat];
+    console.log("Hi! My name is " + kitty.name + " . I am " +
+        kitty.age + " years old. It is " +
+        kitty.isLarge + " that I am a large sized kitty and I live with " +
+        kitty.family + " . I really like to play with a " +
+        kitty.favorite.toy + ". " + kitty.favorite.food + " is numee!")
+
 }
-// this is the cat's meow
+
 for (var currentCat=0; currentCat<cats.cat.length; currentCat++){
-    cats.cat[currentCat].toPurr =
-        [function toPurr(){
-         console.log("purr");},
-         function toMeow(){
-         console.log("meow");
-    }]
+    var kitty = cats.cat[currentCat];
+    if( kitty.isLarge === true ){
+        console.log("I am a " + kitty.isLarge + " I need to go on a diet")
+    }
+
 }
-console.log(cats.cat[4]);
