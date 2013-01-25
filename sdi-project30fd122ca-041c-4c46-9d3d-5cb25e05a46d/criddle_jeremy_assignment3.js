@@ -47,7 +47,8 @@ for (var currentCat=0; currentCat<cats.cat.length; currentCat++){
 for (var currentCat=0; currentCat<cats.cat.length; currentCat++){
     var kitty = cats.cat[currentCat];
     if( kitty.isLarge === true ){
-        console.log("I am a " + kitty.isLarge + " I need to go on a diet")
+        console.log("It is " + kitty.isLarge + " " + kitty.name+ " I need to go on a diet")
     }
 
 }
+// It's 11:42 Thurs. I just can't figure my code into pictures.
